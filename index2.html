@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en">
+<style>
+
+.axis--x path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+</style>
+<head>
+	<meta charset="UTF-8">
+	<title>WHO Maternal Death Rate</title>
+	<link rel="stylesheet" href="_/base.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+		<h4>WHO Data</h4>
+		<h5>Number of Maternal Deaths per 100,000 births</h5>
+		
+		<p>This data is from the World Health Organization and shows number of maternal deaths per 
+		100,000 live births grouped by different regions of the world.<br>
+		The data can be found here: <a href = "http://apps.who.int/gho/data/view.main.1370?lang=en" target="_blank">WHO Dataset</a></p>
+		
+		<p>The visulaization below is a grouped column chart made using d3.js v4.  It includes both 
+		tool-tips and color changing on mouse-over.</p>
+	<form>
+		<label><input type="radio" name="mode" value="percent"> Percent</label>
+		<label><input type="radio" name="mode" value="grouped"> Grouped</label>
+		<label><input type="radio" name="mode" value="stacked"> Stacked</label>
+	</form>
+	<svg width="960" height="500"></svg>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="script-column2.js"></script>
+	
+</body>
+</html>
